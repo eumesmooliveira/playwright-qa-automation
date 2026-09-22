@@ -55,14 +55,18 @@ Os cenários utilizam a API pública **JSONPlaceholder** e incluem operações r
 
 ---
 
-## 🏗️ Estrutura do projeto
-
-```text
 playwright-qa-automation/
 │
 ├── .github/
 │   └── workflows/
 │       └── playwright-tests.yml
+│
+├── docs/
+│   ├── evidence/
+│   │   ├── ct06-checkout-success.webm
+│   │   └── README.md
+│   ├── architecture.md
+│   └── test-strategy.md
 │
 ├── pages/
 │   ├── CartPage.js
@@ -77,11 +81,11 @@ playwright-qa-automation/
 │   └── login.spec.js
 │
 ├── .gitignore
+├── demo.config.js
 ├── package.json
 ├── package-lock.json
 ├── playwright.config.js
 └── README.md
-```
 
 ---
 
@@ -235,6 +239,22 @@ Running 24 tests using 2 workers
 A mesma suíte também foi validada através do pipeline de CI no GitHub Actions.
 
 ---
+
+## 📚 Documentação técnica
+
+Além do README principal, o projeto possui documentação técnica detalhada sobre a estratégia e a arquitetura da automação.
+
+- [Estratégia de Testes](docs/test-strategy.md) — escopo, cenários cobertos, abordagem E2E e API, evidências e critérios adotados.
+- [Arquitetura da Automação](docs/architecture.md) — estrutura do projeto, Page Object Model, decisões arquiteturais, CI e organização da suíte.
+- [Evidências de Execução](docs/evidence/README.md) — documentação das evidências selecionadas da execução automatizada.
+
+### 🎥 Demonstração de execução
+
+Uma execução real do cenário **CT06 - Deve concluir uma compra com sucesso** foi registrada para demonstrar o funcionamento da automação E2E.
+
+📹 [Vídeo da execução do checkout](docs/evidence/ct06-checkout-success.webm)
+
+A evidência foi gerada através de uma configuração específica de demonstração, mantendo os artefatos de portfólio separados da execução normal da suíte.
 
 ## 🎯 Objetivo do projeto
 
