@@ -49,12 +49,16 @@ Os cenários utilizam a API pública **JSONPlaceholder** e incluem operações r
 - GET
 - POST
 - PUT
+- PATCH
 - DELETE
 - Validação de status HTTP
 - Validação da estrutura e dos dados retornados em JSON
 
 ---
 
+## 🏗️ Estrutura do projeto
+
+```text
 playwright-qa-automation/
 │
 ├── .github/
@@ -86,6 +90,7 @@ playwright-qa-automation/
 ├── package-lock.json
 ├── playwright.config.js
 └── README.md
+```
 
 ---
 
@@ -206,6 +211,8 @@ Entre as evidências disponíveis estão:
 
 Esses recursos auxiliam na investigação e análise de falhas encontradas durante a execução dos testes.
 
+Além das evidências automáticas de falha, o repositório mantém uma evidência selecionada de uma execução bem-sucedida para fins de documentação e portfólio.
+
 ---
 
 ## 🔄 Integração contínua
@@ -236,7 +243,7 @@ Running 24 tests using 2 workers
 24 passed
 ```
 
-A mesma suíte também foi validada através do pipeline de CI no GitHub Actions.
+A suíte também é executada através do pipeline de CI no GitHub Actions.
 
 ---
 
@@ -256,6 +263,10 @@ Uma execução real do cenário **CT06 - Deve concluir uma compra com sucesso** 
 
 A evidência foi gerada através de uma configuração específica de demonstração, mantendo os artefatos de portfólio separados da execução normal da suíte.
 
+O arquivo `demo.config.js` permite habilitar a gravação de vídeo para essa finalidade sem alterar a estratégia de evidências utilizada pela configuração principal.
+
+---
+
 ## 🎯 Objetivo do projeto
 
 Este projeto foi desenvolvido como parte de um portfólio de **Quality Assurance e Test Automation**, demonstrando conhecimentos práticos em:
@@ -265,7 +276,9 @@ Este projeto foi desenvolvido como parte de um portfólio de **Quality Assurance
 - Page Object Model
 - Testes cross-browser
 - Validação de respostas HTTP e JSON
-- Geração de evidências de teste
+- Geração e análise de evidências de teste
+- Documentação de estratégia de testes
+- Documentação de decisões arquiteturais
 - Git e versionamento
 - Integração contínua com GitHub Actions
 
